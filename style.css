@@ -3,7 +3,7 @@
 -------------------- */
     <link href="style.css" rel="stylesheet">
 :root {
-  --theme-color: #f4a7c4;
+  --theme-color: #c7a0e8;
 }
 
 * {
@@ -18,7 +18,8 @@ html, body {
 body {
   margin: 0;
   padding: 30px;
-  color: #333;
+  color: #333333
+
 }
 
 /* --------------------
