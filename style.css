@@ -1,12 +1,12 @@
 /* --------------------
         全体
 -------------------- */
-    <link href="style.css" rel="stylesheet">
+
 :root {
-  --theme-color: 
-#c7a0e8
-
-
+  --theme-color: #c7a0e8;
+  --bg-light: #f6e6ff;
+  --accent-pink: #ffb6c1;
+  --text-color: #333;
 }
 
 * {
@@ -21,8 +21,8 @@ html, body {
 body {
   margin: 0;
   padding: 30px;
-  color: #333333
-
+  color: var(--text-color);
+  background-color: var(--bg-light);
 }
 
 /* --------------------
@@ -42,6 +42,9 @@ a {
   color: var(--theme-color);
   text-decoration: none;
 }
+a:hover {
+  color: var(--accent-pink);
+}
 
 /* --------------------
         リスト
@@ -49,10 +52,12 @@ a {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 li:before {
   content: "★";
   color: var(--theme-color);
+  margin-right: 0.3em;
 }
 
 /* --------------------
@@ -64,12 +69,10 @@ table {
   border-collapse: collapse;
   border: solid 1px #f0f0f0;
   min-width: 70%;
-}
-tr {
   background-color: #fff;
 }
 tr:nth-child(2n) {
-  background-color: #f9f9f9;
+  background-color: #f9f0ff;
 }
 th {
   background: var(--theme-color);
