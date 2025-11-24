@@ -3,7 +3,10 @@
 -------------------- */
     <link href="style.css" rel="stylesheet">
 :root {
-  --theme-color: #c7a0e8;
+  --theme-color: 
+#c7a0e8
+
+
 }
 
 * {
