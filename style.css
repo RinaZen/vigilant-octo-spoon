@@ -1,8 +1,12 @@
+/* --------------------
+        全体
+-------------------- */
+
 :root {
-  --theme-color: #c7a0e8;
-  --bg-light: #f6e6ff;
-  --accent-pink: #ffb6c1;
-  --text-color: #333;
+  --theme-color: #c7a0e8;   /* メインカラー：ラベンダー */
+  --bg-light: #f6e6ff;      /* 背景色：薄ラベンダー */
+  --accent-pink: #ffb6c1;   /* ホバーなどアクセント用ピンク */
+  --text-color: #333;        /* 文字色：ダークグレー */
 }
 
 * {
@@ -21,10 +25,18 @@ body {
   background-color: var(--bg-light);
 }
 
+/* --------------------
+        見出し
+-------------------- */
+
 h1, h2, h3 {
   color: var(--theme-color);
   border-bottom: dashed 0.1em var(--theme-color);
 }
+
+/* --------------------
+        リンク
+-------------------- */
 
 a {
   color: var(--theme-color);
@@ -33,6 +45,10 @@ a {
 a:hover {
   color: var(--accent-pink);
 }
+
+/* --------------------
+        リスト
+-------------------- */
 
 ul {
   list-style: none;
@@ -43,6 +59,10 @@ li:before {
   color: var(--theme-color);
   margin-right: 0.3em;
 }
+
+/* --------------------
+          表
+-------------------- */
 
 table {
   border-spacing: 0;
