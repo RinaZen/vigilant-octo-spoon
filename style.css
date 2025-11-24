@@ -3,10 +3,10 @@
 -------------------- */
 
 :root {
-  --theme-color: #c7a0e8;   /* メインカラー：ラベンダー */
-  --bg-light: #f6e6ff;      /* 背景色：薄ラベンダー */
-  --accent-pink: #ffb6c1;   /* ホバーなどアクセント用ピンク */
-  --text-color: #333;        /* 文字色：ダークグレー */
+  --theme-color: #ff85b3;   /* メインカラー：可愛いピンク */
+  --bg-light: #ffe6f0;      /* 背景色：薄ピンクでふんわり */
+  --accent-color: #ff4d91;  /* ホバー・アクセント用濃いピンク */
+  --text-color: #4d1f3c;    /* 文字色：濃いめで読みやすく */
 }
 
 * {
@@ -43,7 +43,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--accent-pink);
+  color: var(--accent-color);
 }
 
 /* --------------------
@@ -67,18 +67,18 @@ li:before {
 table {
   border-spacing: 0;
   border-collapse: collapse;
-  border: solid 1px #f0f0f0;
+  border: solid 1px #fcd0e8;
   min-width: 70%;
-  background-color: #fff;
+  background-color: #fff0f6;
 }
 tr:nth-child(2n) {
-  background-color: #f9f0ff;
+  background-color: #ffe6f3;
 }
 th {
   background: var(--theme-color);
   color: #fff;
 }
 th, td {
-  border: solid 1px #f0f0f0;
+  border: solid 1px #fcd0e8;
   padding: 0.5rem;
 }
