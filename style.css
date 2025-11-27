@@ -3,12 +3,12 @@
 -------------------- */
 
 :root {
-  --theme-color: #ff85b3;      /* メインカラー */
-  --bg-light: #ffe6f0;         /* 背景 */
-  --accent-color: #ff4d91;     /* ホバーアクセント */
-  --text-color: #4d1f3c;       /* 本文 */
-  --card-bg: #fff7fb;          /* カード用の淡いピンク */
-  --shadow: rgba(255, 133, 179, 0.25);
+  --theme-color: #ff85b3;
+  --bg-light: #ffe6f0;
+  --accent-color: #ff4d91;
+  --text-color: #4d1f3c;
+  --card-bg: #fff7fb;
+  --shadow: rgba(255, 133, 179, 0.22);
 }
 
 * {
@@ -26,7 +26,15 @@ body {
   color: var(--text-color);
   background-color: var(--bg-light);
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+/* --------------------
+   セクション
+-------------------- */
+
+section {
+  margin-bottom: 2.5rem;
 }
 
 /* --------------------
@@ -35,25 +43,31 @@ body {
 
 h1, h2, h3 {
   color: var(--theme-color);
-  border-bottom: dashed 0.1em var(--theme-color);
-  padding-bottom: 0.2em;
-  margin-bottom: 0.8em;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  position: relative;
+  padding-left: 0.6em;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   background: var(--card-bg);
-  padding: 0.4em 0.8em;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px var(--shadow);
+  padding: 0.6em 1em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--shadow);
+  border-left: solid 6px var(--theme-color); /* ★ 左ラインでサイト感UP */
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  border-left: solid 4px var(--theme-color);
+  margin-bottom: 0.7rem;
 }
+
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  border-left: solid 3px var(--theme-color);
+  margin-bottom: 0.5rem;
 }
 
 /* --------------------
@@ -63,12 +77,12 @@ h3 {
 a {
   color: var(--theme-color);
   text-decoration: none;
-  transition: 0.2s ease;
   font-weight: 600;
+  transition: all 0.2s ease;
 }
 a:hover {
   color: var(--accent-color);
-  padding-left: 2px;
+  text-decoration: underline;
 }
 
 /* --------------------
@@ -78,65 +92,79 @@ a:hover {
 ul {
   list-style: none;
   padding-left: 0;
+  margin-left: 0.3em;
 }
 
 li {
   position: relative;
-  padding-left: 1.2em;
-  margin-bottom: 0.3em;
+  padding-left: 1.4em;
+  margin-bottom: 0.45em;
 }
 
 li::before {
-  content: "★";
+  content: "•";
   position: absolute;
   left: 0;
-  top: 0.05em;
+  top: -0.1em;
+  font-size: 1.4rem;
   color: var(--theme-color);
 }
 
 /* --------------------
-   表（テーブル）
+   表
 -------------------- */
 
 table {
   border-spacing: 0;
   border-collapse: collapse;
-  min-width: 70%;
+  min-width: 80%;
+  margin: 1rem 0;
   background-color: #fff0f6;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px var(--shadow);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
-tr:nth-child(2n) {
+thead {
+  background: var(--theme-color);
+  color: #fff;
+}
+
+tr:nth-child(even) {
   background-color: #ffe6f3;
 }
 
-th {
-  background: var(--theme-color);
-  color: #fff;
-  text-align: left;
-  font-weight: 600;
-}
-
 th, td {
-  border: solid 1px #fcd0e8;
-  padding: 0.7rem;
-  letter-spacing: 0.02em;
+  border-bottom: solid 1px #fcd0e8;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
 }
 
-td {
-  background: rgba(255, 255, 255, 0.7);
+th {
+  font-weight: 700;
+}
+
+tr:hover td {
+  background: rgba(255, 133, 179, 0.08); /* ★ hover でサイト感 */
 }
 
 /* --------------------
-   カード（必要なら）
+   カード
 -------------------- */
 
 .card {
   background: var(--card-bg);
-  padding: 1.2rem;
+  padding: 1.3rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px var(--shadow);
-  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  border-left: solid 5px var(--theme-color);
+  margin-bottom: 1.8rem;
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px var(--shadow);
+  transform: translateY(-2px);
 }
