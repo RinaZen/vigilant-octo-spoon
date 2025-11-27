@@ -1,14 +1,13 @@
 /* --------------------
-   全体
+        全体
 -------------------- */
 
 :root {
   --theme-color: #ff85b3;
-  --bg-light: #ffe6f0;
   --accent-color: #ff4d91;
   --text-color: #4d1f3c;
-  --card-bg: #fff7fb;
-  --shadow: rgba(255, 133, 179, 0.22);
+  --border-color: rgba(255, 133, 179, 0.5);
+  --bg-light: #fff0f7;
 }
 
 * {
@@ -24,65 +23,50 @@ body {
   margin: 0;
   padding: 30px;
   color: var(--text-color);
-  background-color: var(--bg-light);
+  background: var(--bg-light);
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   line-height: 1.7;
 }
 
 /* --------------------
-   セクション（★実線区切り）
+        セクション区切り（実線）
 -------------------- */
 
 section {
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
-  border-bottom: 2px solid rgba(255, 133, 179, 0.6); /* ★ 実線で見えやすい */
+  margin-bottom: 2rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 2px solid var(--border-color); /* ★ わかりやすい区切り */
 }
 
 /* --------------------
-   見出し（★h2 に下線追加）
+        見出し
 -------------------- */
 
 h1, h2, h3 {
   color: var(--theme-color);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  position: relative;
-  padding-left: 0.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--border-color); /* ★ 可愛いピンクの実線区切り */
+  margin-bottom: 0.8em;
 }
 
 h1 {
-  font-size: 2.1rem;
-  background: var(--card-bg);
-  padding: 0.6em 1em;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px var(--shadow);
-  border-left: solid 6px var(--theme-color);
+  font-size: 2rem;
 }
-
 h2 {
-  font-size: 1.7rem;
-  border-left: solid 4px var(--theme-color);
-  margin-bottom: 0.7rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid rgba(255, 133, 179, 0.5); /* ★ 実線でくっきり区切り */
+  font-size: 1.6rem;
 }
-
 h3 {
-  font-size: 1.4rem;
-  border-left: solid 3px var(--theme-color);
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
 }
 
 /* --------------------
-   リンク
+        リンク
 -------------------- */
 
 a {
   color: var(--theme-color);
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.2s ease;
 }
 a:hover {
   color: var(--accent-color);
@@ -90,85 +74,59 @@ a:hover {
 }
 
 /* --------------------
-   リスト
+        リスト
 -------------------- */
 
 ul {
   list-style: none;
   padding-left: 0;
-  margin-left: 0.3em;
 }
 
 li {
+  margin-bottom: 0.4em;
+  padding-left: 1.2em;
   position: relative;
-  padding-left: 1.4em;
-  margin-bottom: 0.45em;
 }
 
 li::before {
-  content: "•";
+  content: "♥"; /* ★ 星→ハートでかわいく */
+  color: var(--theme-color);
   position: absolute;
   left: 0;
-  top: -0.1em;
-  font-size: 1.4rem;
-  color: var(--theme-color);
+  top: 0.05em;
+  font-size: 1.1rem;
 }
 
 /* --------------------
-   表
+          表
 -------------------- */
 
 table {
   border-spacing: 0;
   border-collapse: collapse;
-  min-width: 80%;
-  margin: 1rem 0;
-  background-color: #fff0f6;
-  border-radius: 12px;
+  border: solid 2px var(--border-color);
+  min-width: 70%;
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px var(--shadow);
-}
-
-thead {
-  background: var(--theme-color);
-  color: #fff;
 }
 
 tr:nth-child(even) {
-  background-color: #ffe6f3;
-}
-
-th, td {
-  border-bottom: solid 1px #fcd0e8;
-  padding: 0.8rem 1rem;
-  text-align: left;
-  font-size: 1rem;
-  letter-spacing: 0.01em;
+  background-color: #ffe6f3; /* ★ ピンクの偶数行 */
 }
 
 th {
+  background: var(--theme-color);
+  color: #fff;
   font-weight: 700;
 }
 
+th, td {
+  border: solid 1px #fcd0e8;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+}
+
 tr:hover td {
-  background: rgba(255, 133, 179, 0.08);
-}
-
-/* --------------------
-   カード
--------------------- */
-
-.card {
-  background: var(--card-bg);
-  padding: 1.3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px var(--shadow);
-  border-left: solid 5px var(--theme-color);
-  margin-bottom: 1.8rem;
-  transition: 0.25s ease;
-}
-
-.card:hover {
-  box-shadow: 0 6px 16px var(--shadow);
-  transform: translateY(-2px);
+  background: rgba(255, 133, 179, 0.15); /* ★ うっすらホバー */
 }
