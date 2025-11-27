@@ -30,15 +30,17 @@ body {
 }
 
 /* --------------------
-   セクション
+   セクション（★実線区切り）
 -------------------- */
 
 section {
   margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 133, 179, 0.6); /* ★ 実線で見えやすい */
 }
 
 /* --------------------
-   見出し
+   見出し（★h2 に下線追加）
 -------------------- */
 
 h1, h2, h3 {
@@ -55,13 +57,15 @@ h1 {
   padding: 0.6em 1em;
   border-radius: 10px;
   box-shadow: 0 4px 12px var(--shadow);
-  border-left: solid 6px var(--theme-color); /* ★ 左ラインでサイト感UP */
+  border-left: solid 6px var(--theme-color);
 }
 
 h2 {
   font-size: 1.7rem;
   border-left: solid 4px var(--theme-color);
   margin-bottom: 0.7rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid rgba(255, 133, 179, 0.5); /* ★ 実線でくっきり区切り */
 }
 
 h3 {
@@ -147,7 +151,7 @@ th {
 }
 
 tr:hover td {
-  background: rgba(255, 133, 179, 0.08); /* ★ hover でサイト感 */
+  background: rgba(255, 133, 179, 0.08);
 }
 
 /* --------------------
